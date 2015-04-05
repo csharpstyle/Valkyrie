@@ -1,0 +1,8 @@
+{
+  "ProjectName": "Valkyrie",
+  "ProjectGuid": "3ffcd6d9-4654-4d26-948d-7b7fd5b0d5d8",
+  "projectVersion": 1,
+  "ProjectTypeGuids": "{da2f9169-4696-40a5-919b-f73985228cac}",
+  "FrameworkVersion": "0.0.1",
+  "Framework": "MobileWebsite"
+}
