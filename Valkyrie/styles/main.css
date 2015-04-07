@@ -1,358 +1,638 @@
-body, html {
-    margin: 0;
-    height: 100%;
-    width: 100%;
+.cf {
+  zoom: 1;
 }
 
-/* COMMON STYLES*/
-.view-content h1 {
-    color: #42454a;
-    font-size: 1.8em;
+.cf:before,
+.cf:after {
+  content: '';
+  display: table;
 }
 
-.view-content h1.welcome {
-    text-align: center;
+.cf:after {
+  clear: both;
 }
 
-.view-content h3 {
-    color: #42454a;
-    font-size: 1.1em;
+.km-flat .km-loader,
+.km-flat .km-rowinsert,
+.km-flat .km-state-active,
+.km-flat .km-scroller-pull,
+.km-flat .k-slider-selection,
+.km-flat .km-touch-scrollbar,
+.km-flat .km-pages .km-current-page,
+.km-flat .k-slider .k-draghandle,
+.km-flat .k-slider .k-draghandle:hover,
+.km-flat .km-tabstrip .km-state-active,
+.km-flat .km-scroller-refresh.km-load-more,
+.km-flat .km-popup .k-state-hover,
+.km-flat .km-popup .k-state-focused,
+.km-flat .km-popup .k-state-selected,
+.km-flat .km-actionsheet > li > a:active,
+.km-flat .km-actionsheet > li > a:hover,
+.km-flat li.km-state-active .km-listview-link,
+.km-flat li.km-state-active .km-listview-label,
+.km-flat .km-listview-label input[type=radio]:checked,
+.km-flat .km-listview-label input[type=checkbox]:checked {
+  background: #3598DB;
 }
 
-.view-content p {
-    color: #4a4e54;
-    font-size: 1em;
+.km-flat .km-loader {
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+     -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
 }
 
-/* IMAGE STYLES*/
-.img {
-    background-image: url(../styles/images/appbuilder.png);
-    background-repeat: no-repeat;
-    text-align: center;
-    width: 320px;
-    height: 250px;
-    margin: 0px auto;
+.km-flat .km-loader:before {
+  background: transparent;
 }
 
-.logo {
-    background-image: url(../styles/images/logo.png);
-    background-repeat: no-repeat;
-    width: 319px;
-    height: 60px;
-    margin: 40px auto;
+#valkyrie.km-flat,
+#valkyrie.km-flat .km-navbar,
+#valkyrie.km-flat .km-content {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  border: 0 none;
+  background-color: #2d3e50;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
 }
 
-/* BUTTON STYLES*/
-.buttonArea {
-    text-align: center;
+#valkyrie .center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.login-button {
-    width: 50%;
-    max-width: 300px;
-    font-size: .9em;
-    -webkit-appearance: none;
+#valkyrie .hide-text {
+  overflow: hidden;
+  text-indent: -999px;
 }
 
-/* MAP STYLES*/
-#no-map {
-    position: absolute;
-    margin: 0 auto;
-    top: 40%;    
-    text-align: center;
+#valkyrie .center-text {
+  text-align: center;
 }
 
-#map-canvas {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.disabled {
+  position: relative;
+  display: block;
 }
 
-#map-search-wrap {
-    position: absolute;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 3px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+.disabled:before {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+  left: -1px;
+  z-index: 1;
+  content: '';
 }
 
-#map-address {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 3px 50px 0px 50px;
-    background-color: #fff;
-    font-style: italic;
-    color: #000;
-    padding: 7px 10px;
-    border-radius: 3em;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(180, 180, 180);
-    border-bottom-color: rgb(255, 255, 255);
-    box-shadow: 0 -1px 0 #3C3C3C;
-    -moz-background-clip: border-box;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
+/* Forms */
+
+::-webkit-input-placeholder {
+  color: #b6c5c6;
 }
 
-#map-search {
-    float: right;
-    width: 40px;
-    height: 40px;
+:-moz-placeholder {
+  color: #b6c5c6;
+}
+
+::-moz-placeholder {
+  color: #b6c5c6;
+}
+
+:-ms-input-placeholder {
+  color: #b6c5c6;
+}
+
+#valkyrie.km-flat form .km-list > li {
+  padding: .7em .7em .5em;
+  border-color: #eaeced;
+}
+
+#valkyrie.km-flat form .km-listinset > li:first-child,
+#valkyrie.km-flat form .km-listgroupinset .km-list > li:first-child {
+  border-width: 0 0 1px;
+  border-color: #eaeced;
+  -webkit-border-radius: 2px 2px 0 0;
+     -moz-border-radius: 2px 2px 0 0;
+          border-radius: 2px 2px 0 0;
+}
+
+#valkyrie.km-flat form .km-listinset > li:last-child,
+#valkyrie.km-flat form .km-listgroupinset .km-list > li:last-child {
+  border: 0 none;
+  -webkit-border-radius: 0 0 2px 2px;
+     -moz-border-radius: 0 0 2px 2px;
+          border-radius: 0 0 2px 2px;
+}
+
+#valkyrie.km-flat .km-list input[type="text"]:not(.k-input),
+#valkyrie.km-flat .km-list input[type="password"],
+#valkyrie.km-flat .km-list input[type="email"],
+#valkyrie.km-flat .km-list input[type="date"],
+#valkyrie.km-flat textarea,
+#valkyrie.km-flat select {
+  position: static;
+  width: 100%;
+  height: 30px;
+  font-size: 1rem;
+}
+
+#valkyrie.km-flat select {
+  padding: .4em .2em;
+}
+
+/* Buttons */
+
+#valkyrie .btn {
+  position: relative;
+  margin: 0 -1px;
+  padding: .6em 0;
+  border: 0 none;
+  background-color: #3598db;
+  font-size: 1.2rem;
+  -webkit-transition: background 0.3s;
+     -moz-transition: background 0.3s;
+          transition: background 0.3s;
+}
+
+#valkyrie .btn:hover {
+  background-color: #5dade2;
+}
+
+#valkyrie .btn:active {
+  background-color: #2485c6;
+}
+
+#valkyrie .disabled .btn {
+  opacity: .35;
+}
+
+#valkyrie .btn-login,
+#valkyrie .signup-view .btn-signup {
+  background-color: #1bbc9b;
+}
+
+#valkyrie .btn-login:hover,
+#valkyrie .signup-view .btn-signup:hover {
+  background-color: #54cdb4;
+}
+
+#valkyrie .btn-login:active,
+#valkyrie .signup-view .btn-signup:active {
+  background-color: #16a086;
+}
+
+#valkyrie .signup-view .btn-signup {
+  display: block;
+}
+
+#valkyrie .signup-view .btn-signup,
+#valkyrie .btn-delete,
+#valkyrie .activity-view .km-footer {
+  text-align: center;
+}
+
+#valkyrie .btn-delete {
+  padding: .6em 1.5em;
+  background-color: #e84c3d;
+}
+
+#valkyrie .btn-delete:hover {
+  background-color: #f7625e;
+}
+
+#valkyrie .btn-delete:active {
+  background-color: #d84039;
+}
+
+#valkyrie .oauth-item .btn {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+#valkyrie .btn-login-fb {
+  background-image: url(images/icon-facebook.png);
+}
+
+#valkyrie .btn-login-google {
+  background-image: url(images/icon-google.png);
+}
+
+#valkyrie .btn-login-liveid {
+  background-image: url(images/icon-liveid.png);
+}
+
+#valkyrie .btn-login-adsf {
+  background-image: url(images/icon-adsf.png);
+}
+
+#valkyrie .km-header .nav-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 2em;
+  height: 2em;
+  border: 0 none;
+  background-color: transparent;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+#valkyrie .km-header .nav-button-back {
+  background-image: url(images/icon-arrow_left.png);
+  background-position: .65em 50%;
+}
+
+#valkyrie .km-header .nav-button-add {
+  background-image: url(images/icon-add.png);
+}
+
+#valkyrie .km-header .nav-button-back,
+#valkyrie .km-header .nav-button-add {
+  -webkit-transition: opacity 0.3s;
+     -moz-transition: opacity 0.3s;
+          transition: opacity 0.3s;
+}
+
+#valkyrie .km-header .nav-button-back:hover,
+#valkyrie .km-header .nav-button-add:hover {
+  opacity: .6;
+}
+
+#valkyrie .km-header .nav-button-cancel,
+#valkyrie .km-header .nav-button-post {
+  width: auto;
+  height: 2.5em;
+  font-size: .85rem;
+  line-height: 2.5em;
+}
+
+/* App Header */
+
+#valkyrie.km-flat.km-on-ios.km-black-translucent-status-bar .km-header {
+  min-height: 20px;
+  background-color: #2d3e50;
+}
+
+#valkyrie.km-flat .km-header .km-navbar {
+  min-height: 3.15em;
+}
+
+#valkyrie.km-flat.km-on-ios.km-black-translucent-status-bar .km-header .km-navbar {
+  min-height: 4.5em;
+}
+
+#valkyrie.km-flat .km-header .km-view-title {
+  margin-top: .4em;
+  font-size: 1rem;
+}
+
+#valkyrie.km-flat.km-on-ios.km-black-translucent-status-bar .km-header .km-view-title {
+  margin-top: .4em;
+}
+
+/* App Footer */
+
+#valkyrie .welcome-scrn .km-footer {
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+}
+
+#valkyrie .welcome-scrn .km-footer p {
+  font-size: .75rem;
+}
+
+/* Welcome screen */
+
+#valkyrie .app-logo,
+#valkyrie .app-name {
+  margin-top: 2.5em;
+}
+
+#valkyrie .app-logo {
+  width: 247px;
+  height: 32px;
+  background: transparent url(images/logo-telerik_devcloud.png) no-repeat 0 0;
+}
+
+#valkyrie .app-name {
+  margin-bottom: 2.5em;
+}
+
+#valkyrie .app-name small {
+  display: block;
+  font-weight: 400;
+  font-size: 1.15rem;
+}
+
+#login-form .username,
+#login-form .password {
+  position: relative;
+}
+
+#login-form .username:before,
+#login-form .password:before {
+  position: absolute;
+  top: 50%;
+  right: .75em;
+  display: block;
+  margin-top: -.5em;
+  width: 1em;
+  height: 1em;
+  background-color: transparent;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+#login-form .username:before {
+  background-image: url(images/icon-username.png);
+}
+
+#login-form .password:before {
+  background-image: url(images/icon-password.png);
+}
+
+#valkyrie .welcome-scrn .group-wrp {
+  margin: -1em 1em 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+#valkyrie .welcome-scrn .group-wrp li {
+  margin: 1.5em 0 0;
+}
+
+#valkyrie .welcome-scrn .group-wrp .btn {
+  display: block;
+}
+
+#valkyrie .welcome-scrn .group-wrp .oauth {
+  margin-right: -1%;
+  margin-left: -1%;
+}
+
+#valkyrie .welcome-scrn .group-wrp .oauth .oauth-item {
+  float: left;
+  margin: 0 1%;
+  width: 23%;
+}
+
+#valkyrie .welcome-scrn .group-wrp .oauth .btn {
+  overflow: hidden;
+  height: 45px;
+  text-indent: -999px;
+}
+
+#valkyrie .welcome-scrn .group-wrp .oauth .btn span,
+#valkyrie .welcome-scrn .group-wrp .btn-signup span {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+#valkyrie .km-header .nav-button-cancel,
+#valkyrie .km-header .nav-button-post,
+#valkyrie .welcome-scrn .group-wrp .btn-signup {
+  -webkit-transition: color 0.3s;
+     -moz-transition: color 0.3s;
+          transition: color 0.3s;
+}
+
+#valkyrie .welcome-scrn .group-wrp .btn-signup {
+  border: 0 none;
+  background-color: transparent;
+}
+
+#valkyrie .km-header .nav-button-cancel:hover,
+#valkyrie .km-header .nav-button-post:hover,
+#valkyrie .welcome-scrn .group-wrp .btn-signup:hover {
+  color: #d4d4d4;
+}
+
+/* No API Key screen */
+
+#valkyrie .noapikey-scrn p {
+    line-height: 1.5;
+    color: #e4e4e4;
+}
+
+#valkyrie .noapikey-scrn p strong,
+#valkyrie .noapikey-scrn p span {
     color: #fff;
-    border: none;
-    background: none;
-    background-image: url(../styles/images/search.png);
-    background-repeat: no-repeat;
-    background-position: center center;
 }
 
-#map-search:active {
-    background-image: url(../styles/images/search_active.png);
-    background-repeat: no-repeat;
+#valkyrie .noapikey-scrn p span {
+    font-weight: 600;
 }
 
-#map-navigate-home {
-    float: left;
-    width: 40px;
-    height: 40px;
-    color: #fff;
-    border: none;
-    background: none;
-    background-image: url(../styles/images/location.png);
-    background-repeat: no-repeat;
-    background-position: center center;
+/* Signup */
+
+#valkyrie .signup-view .select-wrp {
+  -webkit-border-radius: 0 0 2px 2px;
+     -moz-border-radius: 0 0 2px 2px;
+          border-radius: 0 0 2px 2px;
 }
 
-#map-navigate-home:active {
-    background-image: url(../styles/images/location_active.png);
-    background-repeat: no-repeat;
+#valkyrie.km-flat .signup-view .km-listinset > li:last-child {
+  margin: .5em 0 0;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 
-/* WEATHER STYLES*/
-.weather {
-    padding-top:50px;
+#valkyrie .txtarea-wrp textarea {
+  float: none;
+  height: 5.5em;
+  resize: none;
 }
 
-.weather .weather-title {
-    color: #fff;
-    font-size: 1.5em;
-    line-height: 1.2em;
-    text-shadow: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 100%;
+#valkyrie .signup-view .signup-btn-wrp {
+  margin: 0 1em;
 }
 
-.weather-info {
-    color: #fff;
-    font-size: 1.2em;
-    text-shadow: none;
-    line-height: 1.8em;
-    display: inline-block;
+#valkyrie .signup-view .select-wrp select {
+  color: #b6c5c6;
 }
 
-.weather-info.date {
-    margin-top: 7px;
+#valkyrie .signup-view .select-wrp option:first-child {
+  color: #b6c5c6;
 }
 
-.weather-info.temperature {
-    margin-left: 5px;
+/* Activities */
+
+#valkyrie .activities-view .km-content,
+#valkyrie .activity-view .km-content,
+#valkyrie .add-activity-view .km-content,
+#valkyrie .add-comment-view .km-content,
+#valkyrie .activities-view .km-listview {
+  background-color: #fff;
 }
 
-.weather-info.temperature.low {
-    color: rgba(0,0,0,0.5);
+#valkyrie .activities-view .km-list > li,
+#valkyrie .activity-view .km-list > li {
+  overflow: visible;
+  padding: .75em 0;
+  border-width: 0 0 1px;
+  border-color: #eaeced;
+  background-color: #fff;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+  color: #34495e;
 }
 
-/* Weather Icons*/
-.weather-icon {
-    width: 64px;
-    height: 64px;
-    background-image: url(../styles/images/sprite-weather.png);
-    background-repeat: no-repeat;
-    float: right;
-    position: relative;
-    top: -6px;
-    left: -10px;
+#valkyrie .activity-view .comments-wrp {
+  margin-top: 1em;
+  border-top: 1px solid #eaeced;
 }
 
-.weather-icon.sunny {
-    background-position: 0px 0px;
+#valkyrie .activities-view .km-list > li:first-child {
+  padding-top: 0;
 }
 
-.weather-icon.cloudy {
-    background-position: 0px -64px;
+#valkyrie .user-avatar {
+  float: left;
+  width: 50px;
 }
 
-.weather-icon.partly-cloudy {
-    background-position: 0px -128px;
+#valkyrie .user-avatar img {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 25px;
+     -moz-border-radius: 25px;
+          border-radius: 25px;
 }
 
-.weather-icon.partly-sunny {
-    background-position: 0px -192px;
+#valkyrie .activity-content {
+  position: relative;
+  padding-left: 5em;
+  font-size: .85rem;
 }
 
-.weather-icon.shower {
-    background-position: 0px -256px;
+#valkyrie .activity-content .person-name,
+#valkyrie .add-activity-view .person-name,
+#valkyrie .add-comment-view .person-name,
+#valkyrie .activity-content .time-span {
+  font-weight: 600;
 }
 
-.weather-icon.foggy {
-    background-position: 0px -320px;
+#valkyrie .add-activity-view .person-name,
+#valkyrie .add-comment-view .person-name,
+#valkyrie .activity-content .person-name {
+  display: block;
+  margin: 0 0 .5em;
+  color: #3598db;
+  font-size: 1.1rem;
 }
 
-.weather-icon.storm {
-    background-position: 0px -384px;
+#valkyrie .person-name {
+  overflow: hidden;
+  width: 70%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.position-left {
-    float: left;
+#valkyrie .activity-content .time-span {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  color: #6c7884;
+  text-transform: uppercase;
+  font-size: .7rem;
 }
 
-.position-right {
-    float: right;
+#valkyrie .activity-content .comment-content .time-span {
+  top: 12px;
+  font-size: .6rem;
 }
 
-.position.center {
-    position: absolute;
-    margin: 0 auto;
-    width: 100%;
+#valkyrie .user-share-txt {
+  color: #34495e;
 }
 
-/* DEVICE SPECIFIC STYLES*/
-#skin-change {
-    position: absolute;
-    right: 10px;
-    top: 10px;
+#valkyrie .activity-content .comment-content .user-share-txt {
+  font-size: .75rem;
 }
 
-.km-ios .km-listview-wrapper .km-listinset li {
-    background-color: #fff;
-    border-color: #ababab;
+#valkyrie .activity-view .person-name,
+#valkyrie .add-activity-view .person-name,
+#valkyrie .add-comment-view .person-name {
+  margin: .85em 0 1em;
 }
 
-.km-ios .km-view .km-content {
-    background-image: none;
-    background: #f0f0f0;
+#valkyrie .activity-view .comment-content .person-name {
+  margin: 0;
+  font-size: .85rem;
 }
 
-.km-tablet .km-ios .km-navbar .km-view-title {
-    color: #000;
-    text-shadow: 0 -1px rgba(255,255,255,0.3);
+#valkyrie .add-activity-view .person-name,
+#valkyrie .add-comment-view .person-name {
+  padding-left: .75em;
 }
 
-.km-android .view-content h1 {
-    color: #8a8b8f;
+#valkyrie .activity-view .picture {
+  margin: 1em 0 0;
 }
 
-.km-android .view-content p,
-.km-android .view-content h3 {
-    color: #2e5968;
+#valkyrie .user-share {
+  position: relative;
+  margin: 2.35em 0 0;
 }
 
-.km-android .weather-info.temperature.low {
-    color: #2e5968;
+#valkyrie .user-share:before {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
 }
 
-.km-ios .km-view .weather {
-    background: #5fb4ed; /* Old browsers */
-    background: -moz-linear-gradient(top, #5fb4ed 0%, #0076c5 74%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5fb4ed), color-stop(74%,#0076c5)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #5fb4ed 0%,#0076c5 74%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #5fb4ed 0%,#0076c5 74%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #5fb4ed 0%,#0076c5 74%); /* IE10+ */
-    background: linear-gradient(to bottom, #5fb4ed 0%,#0076c5 74%); /* W3C */
-}
-.km-ios7 .km-view .weather,
-.km-wp .km-view .weather,
-.km-flat .km-view .weather {
-    background: #b0b0b0;
+#valkyrie .user-share:before {
+  top: -10px;
+  left: 16px;
+  border-right: 9px solid transparent;
+  border-bottom: 10px solid #f5f7f8;
+  border-left: 9px solid transparent;
 }
 
-.km-flat .km-list > li {
-    box-shadow: none;
+#valkyrie .user-share textarea {
+  float: none;
+  margin: 0;
+  padding: .75em 1em;
+  min-height: 3em;
+  height: 13.5em;
+  background-color: #f5f7f8;
+  resize: none;
 }
 
-.km-ios .km-list > li,
-.km-flat .km-list > li {
-    background: none;
+#valkyrie .activity-view .km-footer {
+  padding: 0 1em 1em;
+  background: #fff none;
 }
 
-/* Separator Style*/
-.separator > .dark {
-    background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2) 70%, rgba(0,0,0,0) 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(30%,rgba(0,0,0,0.2)), color-stop(50%,rgba(0,0,0,0.2)), color-stop(70%,rgba(0,0,0,0.2)), color-stop(100%,rgba(0,0,0,0)));
-    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 30%,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0.2) 70%,rgba(0,0,0,0) 100%);
-    background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 30%,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0.2) 70%,rgba(0,0,0,0) 100%);
-    background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 30%,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0.2) 70%,rgba(0,0,0,0) 100%);
-    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 30%,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0.2) 70%,rgba(0,0,0,0) 100%);
-    height: 1px;
-    border: none;
-    width: 100%;
-    opacity: 0.3;
+#valkyrie .add-activity-view .km-leftitem,
+#valkyrie .add-comment-view .km-leftitem {
+  left: 1em;
 }
 
-.separator > .light {
-    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
-    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
-    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
-    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
-    height: 1px;
-    border: none;
-    width: 100%;
-    opacity: 0.3;
+#valkyrie .add-activity-view .km-rightitem,
+#valkyrie .add-comment-view .km-rightitem,
+#valkyrie .activity-view .km-rightitem {
+    right: 1em;
 }
 
-/* RETINA DISPLAY STYLES*/
-@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
-    .img {
-        background-image: url(../styles/images/appbuilder2x.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
+#valkyrie.km-black-translucent-status-bar .km-navbar .km-leftitem,
+#valkyrie.km-black-translucent-status-bar .km-navbar .km-rightitem {
+  margin-top: .4em;
+}
 
-    .logo {
-        background-image: url(../styles/images/logo2x.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-
-    #map-search {
-        background-image: url(../styles/images/search2x.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-
-    #map-search:active {
-        background-image: url(../styles/images/search_active2x.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-
-    #map-navigate-home {
-        background-image: url(../styles/images/location2x.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-
-    #map-navigate-home:active {
-        background-image: url(../styles/images/location_active2x.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-
-    .weather-icon {
-        background-image: url(../styles/images/sprite-weather2x.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
+#valkyrie .k-invalid-msg {
+  display: none;
+  margin: 1rem 0 0;
+  padding: 0 1rem;
+  color: #e84c3d;
 }

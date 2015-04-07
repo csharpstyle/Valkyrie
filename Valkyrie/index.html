@@ -10,9 +10,12 @@
     <script src="kendo/js/kendo.mobile.min.js"></script>
 
     <script src="scripts/app.js"></script>
+    <script src="scripts/appSettings.js"></script>
+    <script src="scripts/login.js"></script>
+    <script src="scripts/signup.js"></script>
 
 </head>
-<body>
+<body id="valkyrie">
     <div data-role="layout" data-id="main">
         <div data-role="header">
             <div data-role="navbar">
@@ -28,21 +31,8 @@
                 <a href="views/settings.html" data-icon="settings">Settings</a>
                 <a href="views/contacts.html" data-icon="contacts">Contacts</a>
             </div>
+            <p>© <span data-bind="text: getYear"></span> Telerik Inc.</p>
         </div>
     </div>
-    <script>
-        app = new kendo.mobile.Application(document.body, {
-          
-          // you can change the default transition (slide, zoom or fade)
-          transition: 'slide',
-          
-          // comment out the following line to get a UI which matches the look
-          // and feel of the operating system
-          skin: 'flat',
-    
-          // the application needs to know which view to load first
-          initial: 'views/home.html'
-        });
-    </script>
 </body>
 </html>
